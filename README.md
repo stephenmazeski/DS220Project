@@ -25,3 +25,7 @@ PSQL Database is running in Beta Phase. This is necessary to ensure all data-typ
 19 November 2018
 
 Postgres Database is fully operational and out of beta phase. Can be found in PSQL_Database.py
+
+20 November 2018
+
+README has been updated (Completely forgot) with progress. Statistical portion of project begins now.
