@@ -30,6 +30,9 @@ def create_and_populate_tables():
             Arable_Land DECIMAL,
             Crops_of_Arable DECIMAL,
             BirthoverDeath DECIMAL)""",
+        ## The following data is fully cleaned. Any entry that had no values was changed to zeros.
+        ## They were changeed to zeros over averages or removal because the data contained within the tuple was still important.
+        ## The averages would often skew the data far more than a zero-value would.
 
         """INSERT INTO DATAMAIN (Country_name, Population, Density, Infant_Mortality, GDP, Literacy, Phones_Perc, Arable_Land, Crops_of_Arable, BirthoverDeath) VALUES
             ('Afghanistan',31056997,48,163.07,700,36,3.2,12.13,0.22,2.291052114),
