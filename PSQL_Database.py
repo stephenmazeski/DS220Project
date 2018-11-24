@@ -331,7 +331,7 @@ def math2():
     #cur.execute(mathcommand1)
 
     #newmath1 = pd.read_sql(mathcommand1, con=con)
-    mathcommand3=("""SELECT Population FROM DATAMAIN ORDER BY Population""")
+    mathcommand3=("""SELECT Country_name, Population FROM DATAMAIN ORDER BY Population""")
     for j in mathcommand3:
         cur.execute(mathcommand3)
     newmath3 = pd.read_sql(mathcommand3, con=con)
@@ -356,7 +356,7 @@ def math3():
     #cur.execute(mathcommand1)
 
     #newmath1 = pd.read_sql(mathcommand1, con=con)
-    mathcommand4=("""SELECT Density FROM DATAMAIN ORDER BY Density DESC""")
+    mathcommand4=("""SELECT Country_name, Density FROM DATAMAIN ORDER BY Density DESC""")
     for j in mathcommand4:
         cur.execute(mathcommand4)
     newmath4 = pd.read_sql(mathcommand4, con=con)
@@ -381,7 +381,7 @@ def math4():
     #cur.execute(mathcommand1)
 
     #newmath1 = pd.read_sql(mathcommand1, con=con)
-    mathcommand4=("""SELECT Infant_Mortality FROM DATAMAIN ORDER BY Infant_Mortality DESC""")
+    mathcommand4=("""SELECT Country_name, Infant_Mortality FROM DATAMAIN ORDER BY Infant_Mortality DESC""")
     for j in mathcommand4:
         cur.execute(mathcommand4)
     newmath4 = pd.read_sql(mathcommand4, con=con)
@@ -406,7 +406,7 @@ def math5():
     #cur.execute(mathcommand1)
 
     #newmath1 = pd.read_sql(mathcommand1, con=con)
-    mathcommand4=("""SELECT GDP FROM DATAMAIN ORDER BY GDP DESC""")
+    mathcommand4=("""SELECT Country_name, GDP FROM DATAMAIN ORDER BY GDP DESC""")
     for j in mathcommand4:
         cur.execute(mathcommand4)
     newmath4 = pd.read_sql(mathcommand4, con=con)
@@ -431,7 +431,7 @@ def math6():
     #cur.execute(mathcommand1)
 
     #newmath1 = pd.read_sql(mathcommand1, con=con)
-    mathcommand4=("""SELECT Literacy FROM DATAMAIN ORDER BY Literacy DESC""")
+    mathcommand4=("""SELECT Country_name, Literacy FROM DATAMAIN ORDER BY Literacy DESC""")
     for j in mathcommand4:
         cur.execute(mathcommand4)
     newmath4 = pd.read_sql(mathcommand4, con=con)
@@ -456,7 +456,7 @@ def math7():
     #cur.execute(mathcommand1)
 
     #newmath1 = pd.read_sql(mathcommand1, con=con)
-    mathcommand4=("""SELECT Phones_Perc FROM DATAMAIN ORDER BY Phones_Perc DESC""")
+    mathcommand4=("""SELECT Country_name, Phones_Perc FROM DATAMAIN ORDER BY Phones_Perc DESC""")
     for j in mathcommand4:
         cur.execute(mathcommand4)
     newmath4 = pd.read_sql(mathcommand4, con=con)
@@ -481,7 +481,7 @@ def math8():
     #cur.execute(mathcommand1)
 
     #newmath1 = pd.read_sql(mathcommand1, con=con)
-    mathcommand4=("""SELECT Arable_Land FROM DATAMAIN ORDER BY Arable_Land DESC""")
+    mathcommand4=("""SELECT Country_name, Arable_Land FROM DATAMAIN ORDER BY Arable_Land DESC""")
     for j in mathcommand4:
         cur.execute(mathcommand4)
     newmath4 = pd.read_sql(mathcommand4, con=con)
@@ -506,7 +506,7 @@ def math9():
     #cur.execute(mathcommand1)
 
     #newmath1 = pd.read_sql(mathcommand1, con=con)
-    mathcommand4=("""SELECT Crops_of_Arable FROM DATAMAIN ORDER BY Crops_of_Arable DESC""")
+    mathcommand4=("""SELECT Country_name, Crops_of_Arable FROM DATAMAIN ORDER BY Crops_of_Arable DESC""")
     for j in mathcommand4:
         cur.execute(mathcommand4)
     newmath4 = pd.read_sql(mathcommand4, con=con)
@@ -531,7 +531,7 @@ def math10():
     #cur.execute(mathcommand1)
 
     #newmath1 = pd.read_sql(mathcommand1, con=con)
-    mathcommand4=("""SELECT BirthoverDeath FROM DATAMAIN ORDER BY BirthoverDeath DESC""")
+    mathcommand4=("""SELECT Country_name, BirthoverDeath FROM DATAMAIN ORDER BY BirthoverDeath DESC""")
     for j in mathcommand4:
         cur.execute(mathcommand4)
     newmath4 = pd.read_sql(mathcommand4, con=con)
