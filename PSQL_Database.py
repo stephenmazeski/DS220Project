@@ -30,9 +30,6 @@ def create_and_populate_tables():
             Arable_Land DECIMAL,
             Crops_of_Arable DECIMAL,
             BirthoverDeath DECIMAL)""",
-        ## The following data is fully cleaned. Any entry that had no values was changed to zeros.
-        ## They were changeed to zeros over averages or removal because the data contained within the tuple was still important.
-        ## The averages would often skew the data far more than a zero-value would.
 
         """INSERT INTO DATAMAIN (Country_name, Population, Density, Infant_Mortality, GDP, Literacy, Phones_Perc, Arable_Land, Crops_of_Arable, BirthoverDeath) VALUES
             ('Afghanistan',31056997,48,163.07,700,36,3.2,12.13,0.22,2.291052114),
@@ -261,7 +258,7 @@ def create_and_populate_tables():
             ('Western Sahara',273008,1,0,0,0,0,0.02,0,0),
             ('Yemen',21456188,40.6,61.5,800,50.2,37.2,2.78,0.24,5.16746988),
             ('Zambia',11502010,15.3,88.29,800,80.6,8.2,7.08,0.03,2.057200201),
-            ('Zimbabwe',12236805,31.3,67.69,1900,90.7,26.8,8.32,0.34,1.282509158)""")
+            ('Zimbabwe',12236805,31.3,67.69,1900,90.7,26.8,8.32,0.34,1.282509158);""")
     for create in creates:
         cur.execute(create)
 
@@ -292,5 +289,270 @@ def delete_tables():
     conn.commit()
     conn.close()
 
+def math():
+        ###
+
+        conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
+        #Connect to database
+        con = psycopg2.connect(conn_string)
+        cur = con.cursor()
+
+
+        mathcommand1="SELECT AVG(Population) FROM DATAMAIN"
+
+
+        cur.execute(mathcommand1)
+
+        newmath1 = pd.read_sql(mathcommand1, con=con)
+        mathcommand2=("""SELECT * FROM DATAMAIN""")
+        for j in mathcommand2:
+            cur.execute(mathcommand2)
+        newmath2 = pd.read_sql(mathcommand2, con=con)
+        print(newmath2)
+        cur.close()
+        con.commit()
+        con.close()
+
+
+
+def math2():
+
+###
+
+    conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
+#Connect to database
+    con = psycopg2.connect(conn_string)
+    cur = con.cursor()
+
+
+    #mathcommand1="SELECT AVG(Population) FROM DATAMAIN"
+
+
+    #cur.execute(mathcommand1)
+
+    #newmath1 = pd.read_sql(mathcommand1, con=con)
+    mathcommand3=("""SELECT Population FROM DATAMAIN ORDER BY Population""")
+    for j in mathcommand3:
+        cur.execute(mathcommand3)
+    newmath3 = pd.read_sql(mathcommand3, con=con)
+    print(newmath3)
+    cur.close()
+    con.commit()
+    con.close()
+
+def math3():
+
+###
+
+    conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
+#Connect to database
+    con = psycopg2.connect(conn_string)
+    cur = con.cursor()
+
+
+    #mathcommand1="SELECT AVG(Population) FROM DATAMAIN"
+
+
+    #cur.execute(mathcommand1)
+
+    #newmath1 = pd.read_sql(mathcommand1, con=con)
+    mathcommand4=("""SELECT Density FROM DATAMAIN ORDER BY Density DESC""")
+    for j in mathcommand4:
+        cur.execute(mathcommand4)
+    newmath4 = pd.read_sql(mathcommand4, con=con)
+    print(newmath4)
+    cur.close()
+    con.commit()
+    con.close()
+
+def math4():
+
+###Country_name, Population, Density, Infant_Mortality, GDP, Literacy, Phones_Perc, Arable_Land, Crops_of_Arable, BirthoverDeath
+
+    conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
+#Connect to database
+    con = psycopg2.connect(conn_string)
+    cur = con.cursor()
+
+
+    #mathcommand1="SELECT AVG(Population) FROM DATAMAIN"
+
+
+    #cur.execute(mathcommand1)
+
+    #newmath1 = pd.read_sql(mathcommand1, con=con)
+    mathcommand4=("""SELECT Infant_Mortality FROM DATAMAIN ORDER BY Infant_Mortality DESC""")
+    for j in mathcommand4:
+        cur.execute(mathcommand4)
+    newmath4 = pd.read_sql(mathcommand4, con=con)
+    print(newmath4)
+    cur.close()
+    con.commit()
+    con.close()
+
+def math5():
+
+###Country_name, Population, Density, Infant_Mortality, GDP, Literacy, Phones_Perc, Arable_Land, Crops_of_Arable, BirthoverDeath
+
+    conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
+#Connect to database
+    con = psycopg2.connect(conn_string)
+    cur = con.cursor()
+
+
+    #mathcommand1="SELECT AVG(Population) FROM DATAMAIN"
+
+
+    #cur.execute(mathcommand1)
+
+    #newmath1 = pd.read_sql(mathcommand1, con=con)
+    mathcommand4=("""SELECT GDP FROM DATAMAIN ORDER BY GDP DESC""")
+    for j in mathcommand4:
+        cur.execute(mathcommand4)
+    newmath4 = pd.read_sql(mathcommand4, con=con)
+    print(newmath4)
+    cur.close()
+    con.commit()
+    con.close()
+
+def math6():
+
+###Country_name, Population, Density, Infant_Mortality, GDP, Literacy, Phones_Perc, Arable_Land, Crops_of_Arable, BirthoverDeath
+
+    conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
+#Connect to database
+    con = psycopg2.connect(conn_string)
+    cur = con.cursor()
+
+
+    #mathcommand1="SELECT AVG(Population) FROM DATAMAIN"
+
+
+    #cur.execute(mathcommand1)
+
+    #newmath1 = pd.read_sql(mathcommand1, con=con)
+    mathcommand4=("""SELECT Literacy FROM DATAMAIN ORDER BY Literacy DESC""")
+    for j in mathcommand4:
+        cur.execute(mathcommand4)
+    newmath4 = pd.read_sql(mathcommand4, con=con)
+    print(newmath4)
+    cur.close()
+    con.commit()
+    con.close()
+
+def math7():
+
+###Country_name, Population, Density, Infant_Mortality, GDP, Literacy, Phones_Perc, Arable_Land, Crops_of_Arable, BirthoverDeath
+
+    conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
+#Connect to database
+    con = psycopg2.connect(conn_string)
+    cur = con.cursor()
+
+
+    #mathcommand1="SELECT AVG(Population) FROM DATAMAIN"
+
+
+    #cur.execute(mathcommand1)
+
+    #newmath1 = pd.read_sql(mathcommand1, con=con)
+    mathcommand4=("""SELECT Phones_Perc FROM DATAMAIN ORDER BY Phones_Perc DESC""")
+    for j in mathcommand4:
+        cur.execute(mathcommand4)
+    newmath4 = pd.read_sql(mathcommand4, con=con)
+    print(newmath4)
+    cur.close()
+    con.commit()
+    con.close()
+
+def math8():
+
+###
+
+    conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
+#Connect to database
+    con = psycopg2.connect(conn_string)
+    cur = con.cursor()
+
+
+    #mathcommand1="SELECT AVG(Population) FROM DATAMAIN"
+
+
+    #cur.execute(mathcommand1)
+
+    #newmath1 = pd.read_sql(mathcommand1, con=con)
+    mathcommand4=("""SELECT Arable_Land FROM DATAMAIN ORDER BY Arable_Land DESC""")
+    for j in mathcommand4:
+        cur.execute(mathcommand4)
+    newmath4 = pd.read_sql(mathcommand4, con=con)
+    print(newmath4)
+    cur.close()
+    con.commit()
+    con.close()
+
+def math9():
+
+###
+
+    conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
+#Connect to database
+    con = psycopg2.connect(conn_string)
+    cur = con.cursor()
+
+
+    #mathcommand1="SELECT AVG(Population) FROM DATAMAIN"
+
+
+    #cur.execute(mathcommand1)
+
+    #newmath1 = pd.read_sql(mathcommand1, con=con)
+    mathcommand4=("""SELECT Crops_of_Arable FROM DATAMAIN ORDER BY Crops_of_Arable DESC""")
+    for j in mathcommand4:
+        cur.execute(mathcommand4)
+    newmath4 = pd.read_sql(mathcommand4, con=con)
+    print(newmath4)
+    cur.close()
+    con.commit()
+    con.close()
+
+def math10():
+
+###
+
+    conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
+#Connect to database
+    con = psycopg2.connect(conn_string)
+    cur = con.cursor()
+
+
+    #mathcommand1="SELECT AVG(Population) FROM DATAMAIN"
+
+
+    #cur.execute(mathcommand1)
+
+    #newmath1 = pd.read_sql(mathcommand1, con=con)
+    mathcommand4=("""SELECT BirthoverDeath FROM DATAMAIN ORDER BY BirthoverDeath DESC""")
+    for j in mathcommand4:
+        cur.execute(mathcommand4)
+    newmath4 = pd.read_sql(mathcommand4, con=con)
+    print(newmath4)
+    cur.close()
+    con.commit()
+    con.close()
+
+
+
+
+
 if __name__ == '__main__':
     create_and_populate_tables()
+    math()
+    math2()
+    math3()
+    math4()
+    math5()
+    math6()
+    math7()
+    math8()
+    math9()
+    math10()
