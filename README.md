@@ -33,3 +33,7 @@ README has been updated (Completely forgot) with progress. Statistical portion o
 24 November 2018
 
 Many queries added and previous warning from CMD fixed. Code now running on personal postgres server and command prompt. SM
+
+25 November 2018
+
+Clean Data pushed.. Will continue to work tomorrow as I have other obligations today. SM
