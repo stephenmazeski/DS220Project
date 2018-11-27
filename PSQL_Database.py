@@ -542,9 +542,300 @@ def math10():
     con.commit()
     con.close()
 
+def population():
+    conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
+#Connect to database
+    con = psycopg2.connect(conn_string)
+    cur = con.cursor()
+
+
+    #mathcommand1="SELECT AVG(Population) FROM DATAMAIN"
+
+
+    #cur.execute(mathcommand1)
+
+    #newmath1 = pd.read_sql(mathcommand1, con=con)
+    TotalPopulation=("""SELECT SUM(Population) AS "WORLD POPULATION TOTAL" FROM DATAMAIN """)
+    for j in TotalPopulation:
+        cur.execute(TotalPopulation)
+    newmath4 = pd.read_sql(TotalPopulation, con=con)
+    print(newmath4)
+    cur.close()
+    con.commit()
+    con.close()
+
+def pmath():
+        ###
+
+        conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
+        #Connect to database
+        con = psycopg2.connect(conn_string)
+        cur = con.cursor()
+
+
+        mathcommand1="SELECT POWER(Population, 30) FROM DATAMAIN"
+
+
+        cur.execute(mathcommand1)
+
+        newmath1 = pd.read_sql(mathcommand1, con=con)
+        mathcommand2=("""SELECT * FROM DATAMAIN""")
+        for j in mathcommand2:
+            cur.execute(mathcommand2)
+        newmath2 = pd.read_sql(mathcommand2, con=con)
+        print(newmath2)
+        cur.close()
+        con.commit()
+        con.close()
 
 
 
+def pmath2():
+
+###
+
+    conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
+#Connect to database
+    con = psycopg2.connect(conn_string)
+    cur = con.cursor()
+
+
+    #mathcommand1="SELECT AVG(Population) FROM DATAMAIN"
+
+
+    #cur.execute(mathcommand1)
+
+    #newmath1 = pd.read_sql(mathcommand1, con=con)
+    mathcommand3=("""SELECT Country_name, POWER(Population,30) FROM DATAMAIN ORDER BY Population""")
+    for j in mathcommand3:
+        cur.execute(mathcommand3)
+    newmath3 = pd.read_sql(mathcommand3, con=con)
+    print(newmath3)
+    cur.close()
+    con.commit()
+    con.close()
+
+def pmath3():
+
+###
+
+    conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
+#Connect to database
+    con = psycopg2.connect(conn_string)
+    cur = con.cursor()
+
+
+    #mathcommand1="SELECT AVG(Population) FROM DATAMAIN"
+
+
+    #cur.execute(mathcommand1)
+
+    #newmath1 = pd.read_sql(mathcommand1, con=con)
+    mathcommand4=("""SELECT Country_name, POWER(Density, 30) FROM DATAMAIN ORDER BY Density DESC""")
+    for j in mathcommand4:
+        cur.execute(mathcommand4)
+    newmath4 = pd.read_sql(mathcommand4, con=con)
+    print(newmath4)
+    cur.close()
+    con.commit()
+    con.close()
+
+def pmath4():
+
+###Country_name, Population, Density, Infant_Mortality, GDP, Literacy, Phones_Perc, Arable_Land, Crops_of_Arable, BirthoverDeath
+
+    conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
+#Connect to database
+    con = psycopg2.connect(conn_string)
+    cur = con.cursor()
+
+
+    #mathcommand1="SELECT AVG(Population) FROM DATAMAIN"
+
+
+    #cur.execute(mathcommand1)
+
+    #newmath1 = pd.read_sql(mathcommand1, con=con)
+    mathcommand4=("""SELECT Country_name, POWER(Infant_Mortality,30) FROM DATAMAIN ORDER BY Infant_Mortality DESC""")
+    for j in mathcommand4:
+        cur.execute(mathcommand4)
+    newmath4 = pd.read_sql(mathcommand4, con=con)
+    print(newmath4)
+    cur.close()
+    con.commit()
+    con.close()
+
+def pmath5():
+
+###Country_name, Population, Density, Infant_Mortality, GDP, Literacy, Phones_Perc, Arable_Land, Crops_of_Arable, BirthoverDeath
+
+    conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
+#Connect to database
+    con = psycopg2.connect(conn_string)
+    cur = con.cursor()
+
+
+    #mathcommand1="SELECT AVG(Population) FROM DATAMAIN"
+
+
+    #cur.execute(mathcommand1)
+
+    #newmath1 = pd.read_sql(mathcommand1, con=con)
+    mathcommand4=("""SELECT Country_name, POWER(GDP,30) FROM DATAMAIN ORDER BY GDP DESC""")
+    for j in mathcommand4:
+        cur.execute(mathcommand4)
+    newmath4 = pd.read_sql(mathcommand4, con=con)
+    print(newmath4)
+    cur.close()
+    con.commit()
+    con.close()
+
+def pmath6():
+
+###Country_name, Population, Density, Infant_Mortality, GDP, Literacy, Phones_Perc, Arable_Land, Crops_of_Arable, BirthoverDeath
+
+    conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
+#Connect to database
+    con = psycopg2.connect(conn_string)
+    cur = con.cursor()
+
+
+    #mathcommand1="SELECT AVG(Population) FROM DATAMAIN"
+
+
+    #cur.execute(mathcommand1)
+
+    #newmath1 = pd.read_sql(mathcommand1, con=con)
+    mathcommand4=("""SELECT Country_name, POWER(Literacy,30) FROM DATAMAIN ORDER BY Literacy DESC""")
+    for j in mathcommand4:
+        cur.execute(mathcommand4)
+    newmath4 = pd.read_sql(mathcommand4, con=con)
+    print(newmath4)
+    cur.close()
+    con.commit()
+    con.close()
+
+def pmath7():
+
+###Country_name, Population, Density, Infant_Mortality, GDP, Literacy, Phones_Perc, Arable_Land, Crops_of_Arable, BirthoverDeath
+
+    conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
+#Connect to database
+    con = psycopg2.connect(conn_string)
+    cur = con.cursor()
+
+
+    #mathcommand1="SELECT AVG(Population) FROM DATAMAIN"
+
+
+    #cur.execute(mathcommand1)
+
+    #newmath1 = pd.read_sql(mathcommand1, con=con)
+    mathcommand4=("""SELECT Country_name, POWER(Phones_Perc,30) FROM DATAMAIN ORDER BY Phones_Perc DESC""")
+    for j in mathcommand4:
+        cur.execute(mathcommand4)
+    newmath4 = pd.read_sql(mathcommand4, con=con)
+    print(newmath4)
+    cur.close()
+    con.commit()
+    con.close()
+
+def pmath8():
+
+###
+
+    conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
+#Connect to database
+    con = psycopg2.connect(conn_string)
+    cur = con.cursor()
+
+
+    #mathcommand1="SELECT AVG(Population) FROM DATAMAIN"
+
+
+    #cur.execute(mathcommand1)
+
+    #newmath1 = pd.read_sql(mathcommand1, con=con)
+    mathcommand4=("""SELECT Country_name, POWER(Arable_Land,30) FROM DATAMAIN ORDER BY Arable_Land DESC""")
+    for j in mathcommand4:
+        cur.execute(mathcommand4)
+    newmath4 = pd.read_sql(mathcommand4, con=con)
+    print(newmath4)
+    cur.close()
+    con.commit()
+    con.close()
+
+def pmath9():
+
+###
+
+    conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
+#Connect to database
+    con = psycopg2.connect(conn_string)
+    cur = con.cursor()
+
+
+    #mathcommand1="SELECT AVG(Population) FROM DATAMAIN"
+
+
+    #cur.execute(mathcommand1)
+
+    #newmath1 = pd.read_sql(mathcommand1, con=con)
+    mathcommand4=("""SELECT Country_name, POWER(Crops_of_Arable,30) FROM DATAMAIN ORDER BY Crops_of_Arable DESC""")
+    for j in mathcommand4:
+        cur.execute(mathcommand4)
+    newmath4 = pd.read_sql(mathcommand4, con=con)
+    print(newmath4)
+    cur.close()
+    con.commit()
+    con.close()
+
+def pmath10():
+
+###
+
+    conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
+#Connect to database
+    con = psycopg2.connect(conn_string)
+    cur = con.cursor()
+
+
+    #mathcommand1="SELECT AVG(Population) FROM DATAMAIN"
+
+
+    #cur.execute(mathcommand1)
+
+    #newmath1 = pd.read_sql(mathcommand1, con=con)
+    mathcommand4=("""SELECT Country_name, POWER(BirthoverDeath,30) FROM DATAMAIN ORDER BY BirthoverDeath DESC""")
+    for j in mathcommand4:
+        cur.execute(mathcommand4)
+    newmath4 = pd.read_sql(mathcommand4, con=con)
+    print(newmath4)
+    cur.close()
+    con.commit()
+    con.close()
+
+def ppopulation():
+    conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
+#Connect to database
+    con = psycopg2.connect(conn_string)
+    cur = con.cursor()
+
+
+    #mathcommand1="SELECT AVG(Population) FROM DATAMAIN"
+
+
+    #cur.execute(mathcommand1)
+
+    #newmath1 = pd.read_sql(mathcommand1, con=con)
+    TotalPopulation=("""SELECT POWER(Population,30) AS "WORLD POPULATION TOTAL" FROM DATAMAIN """)
+    for j in TotalPopulation:
+        cur.execute(TotalPopulation)
+    newmath4 = pd.read_sql(TotalPopulation, con=con)
+    print(newmath4)
+    cur.close()
+    con.commit()
+    con.close()
 
 if __name__ == '__main__':
     psql_start = time.time()
@@ -560,5 +851,25 @@ if __name__ == '__main__':
     math8()
     math9()
     math10()
+    population()
+
+
+
     psql_end = time.time()
     print("Time for PotgreSQL compilation and query evaluation::: ", psql_end-psql_start)
+
+    #NOW TO DEMONSTRATE POWERMATH AND SPEED OF PSQL TRANSACTIONS
+    ppsql_start = time.time()
+    pmath()
+    pmath2()
+    pmath3()
+    pmath4()
+    pmath5()
+    pmath6()
+    pmath7()
+    pmath8()
+    pmath9()
+    pmath10()
+    ppopulation()
+    ppsql_end = time.time()
+    print("Time for PotgreSQL compilation and query evaluation::: ", ppsql_end-ppsql_start)
