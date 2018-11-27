@@ -2,12 +2,14 @@ import csv
 import plotly
 import psycopg2
 import sys
+import sqlite3
+import time
 
 import numpy as np
 import pandas as pd
 
 
-def create_and_populate_tables():
+def create_and_populate_tables_psql():
 
     #Define our connection parameters
     conn_string = "host='localhost' dbname='postgres' user='postgres' password='password'"
@@ -545,7 +547,9 @@ def math10():
 
 
 if __name__ == '__main__':
-    create_and_populate_tables()
+    psql_start = time.time()
+    create_and_populate_tables_psql()
+    #create_and_populate_tables_sql()
     math()
     math2()
     math3()
@@ -556,3 +560,5 @@ if __name__ == '__main__':
     math8()
     math9()
     math10()
+    psql_end = time.time()
+    print("Time for PotgreSQL compilation and query evaluation::: ", psql_end-psql_start)
