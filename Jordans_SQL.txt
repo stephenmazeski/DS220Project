@@ -1,0 +1,15 @@
+SELECT * FROM DATAMAIN;
+SELECT Country_name, Population FROM DATAMAIN ORDER BY Population;
+SELECT Country_name, Density FROM DATAMAIN ORDER BY Density DESC;
+SELECT Country_name, Infant_Mortality FROM DATAMAIN ORDER BY Infant_Mortality DESC;
+SELECT Country_name, GDP FROM DATAMAIN ORDER BY GDP DESC;
+SELECT Country_name, Literacy FROM DATAMAIN ORDER BY Literacy DESC;
+SELECT Country_name, Phones_Perc FROM DATAMAIN ORDER BY Phones_Perc DESC;
+SELECT Country_name, Arable_Land FROM DATAMAIN ORDER BY Arable_Land DESC;
+SELECT Country_name, Crops_of_Arable FROM DATAMAIN ORDER BY Crops_of_Arable DESC;
+SELECT Country_name, BirthoverDeath FROM DATAMAIN ORDER BY BirthoverDeath DESC;
+SELECT SUM(Population) AS "WORLD POPULATION TOTAL" FROM DATAMAIN;
+
+
+
+### COMMANDS ARE IDENTICAL TO PSQL in Python STRIP
